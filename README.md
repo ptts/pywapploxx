@@ -52,7 +52,7 @@ controller = Controller(
 )
 ```
 
-The WAppLoxx controller uses an unsigned certificate, therefore you need to either choose unencrypted communication by specifying `http` in the `controller_url` or set `verify_ssl` to `False`. Both options are not ideal from a security perspective, so be aware that people on the same network might be able to sniff credentials!
+The WAppLoxx controller uses an unsigned certificate, therefore you need to either choose unencrypted communication by specifying `http` in the controller `url` or set `verify_ssl` to `False`. Both options are not ideal from a security perspective, so be aware that people on the same network might be able to sniff credentials!
 
 Using SSL is also *significantly* (sometimes 10x) slower than the unencrypted endpoint.
 
