@@ -171,7 +171,7 @@ def _check_ip_block() -> None:
 class Controller:
     def __init__(
         self,
-        controller_url: str,
+        url: str,
         username: str,
         password: str,
         verify_ssl: bool = True,
@@ -179,7 +179,7 @@ class Controller:
         save_ip_block_time: bool = True,
         debug: bool = False,
     ):
-        self.controller_url = controller_url
+        self.url = url
         self.username = username
         self.password = password
         self.verify_ssl = verify_ssl
@@ -221,7 +221,7 @@ class Controller:
             params.update(input_params if input_params else {})
 
         response = self._session.get(
-            _urljoin(self.controller_url, endpoint),
+            _urljoin(self.url, endpoint),
             params=params,
             verify=self.verify_ssl,
             timeout=self.timeout,
